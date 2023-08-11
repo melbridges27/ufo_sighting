@@ -51,8 +51,8 @@ def world_cities_map(response):
 def project_analyses(response):
     return render(response, "melsite2/projects/dtsc691/DTSC691ProjectAnalysis.html", {})
 
-def csv(response):
-    return render(response, "melsite2/projects/dtsc691/nuforc_reports.csv", {})
+def preds(response):
+    return render(response, "melsite2/projects/dtsc691/preds.html", {})
 
 def json(response):
     return render(response, "melsite2/projects/dtsc691/nuforc_reports.json", {})

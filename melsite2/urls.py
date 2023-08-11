@@ -19,7 +19,6 @@ urlpatterns  = [
     path("dtsc691/us_cities_map/", views.us_cities_map, name="us_cities_map"),
     path("dtsc691/world_cities_map/", views.world_cities_map, name="world_cities_map"),
     path("dtsc691/project_analyses/", views.project_analyses, name="project_analyses"),
-    path("dtsc691/csv/", views.csv, name="csv"),
-    path("dtsc691/json/", views.json, name="json"),
-
+    path("dtsc691/preds/", views.preds, name="preds"),
+   
 ]
