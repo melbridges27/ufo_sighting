@@ -1,0 +1,19 @@
+{% extends 'melsite2/base.html' %}
+{% load static %} 
+
+{% block title %}
+Project Menu
+{% endblock %}
+
+{% block content %}
+<div class="display_text">
+    <img src="{% static 'images/laptophand.png' %}" alt="computer_data" style="width:75%;">
+    <div class="text_inside"><h3>SeekerFinds.info</h3></div><br><br>
+    <h3 style="margin-left:5px; margin-top: 15px">Project Menu</h3> 
+    <q>&nbsp;<a href="/dtsc691menu">DTSC691 Project</a></q>
+    <br><q>&nbsp;<a href="/fars">FARS Project</a></q>
+    <br><q>&nbsp;<a href="/fethealth">Fetal Health Classifier</a></q><br><br><br>
+    <br><button type="button" class="btn btn-outline-secondary btn-sm rounded-2" onclick="history.back ()" style="margin-left: 10px;">Go Back</button> 
+</div> 
+<br> 
+{% endblock %}

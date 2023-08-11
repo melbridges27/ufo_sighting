@@ -1,0 +1,14 @@
+{% extends 'melsite2/base.html' %}
+{% load static %} 
+
+{% block title %}
+Fetal Health Data
+{% endblock %}
+
+{% block content %}
+<div class="display_text">
+  <img src="{% static 'images/baby_held.jpg' %}" alt="computer_data" style="width: 75%;">
+  <div class="text_inside" style="color: white;"><h3>Fetal Health Classifier</h3></div>
+  <br><button type="button" class="btn btn-outline-secondary btn-sm rounded-2" onclick="history.back ()" style="margin-left:5px; margin-top: 100px;">Go Back</button>  
+</div>
+{% endblock %}

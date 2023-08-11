@@ -1,0 +1,58 @@
+{% extends 'melsite2/base.html' %}
+{% load static %} 
+
+{% block title %}
+Project Page
+{% endblock %}
+
+{% block content %}
+<br>
+<h3>&nbsp;&nbsp;Project List</h3>
+<div class="container">
+    <div id ="line-break" class="row">
+        <i class="bi bi-arrow-right-square-fill"></i><a href="/691project">DTSC 691 Project</a>
+    </div>
+
+    <div id ="line-break" class="row">
+        <q><a href="/691project">DTSC 691 Project</a></q>
+    </div>
+    <div id ="line-break" class="row">
+        <q><a href="/fars">FARS Data</a></q>
+    </div>
+
+    <div id ="line-break" class="row">
+        <q>&#9;<a href="/691project">DTSC 691 Project</a></q>
+    </div>
+    <div id ="line-break" class="row">
+        <q>&#9;<a href="/fars">FARS Data</a></q>
+    </div>
+    
+    </div>
+    <div id ="line-break" class="row">
+        <q>&#9;<a href="/covid">Health Data</a></q>
+    </div>
+</div>
+<br>
+<div class="rounded_box" style="float: left;"> 
+
+<div class="container" style="float: left;">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card card-body" id="profile-wrapper">
+          <br>
+          <img id="profile-pic" src="{% static 'images/mb_glasses_plants_fixed_sm.png' %}">
+           <h6> Hi, I am Melissa.</h6>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="card card-body">
+          <h5>About Me</h5>
+          <p>I am a data scientist and graphics designer with interests in data analytics, coding, and digital design. I am experienced in data-conversion systems, coding/programming in Python, R, SQL, Perl, and C++. In my spare time, I enjoy creating digital design, painting, writing, practicing tai chi, and being with my family.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

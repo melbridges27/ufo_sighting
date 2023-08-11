@@ -1,0 +1,189 @@
+/*
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+*/
+
+body {
+/*    background-color: #effbe1!important; */
+    background-color: #fffff0!important;
+}
+.button { 
+    background: none; 
+    border: none; 
+    padding: 0;  
+    font-size: 16px; 
+    color: blue; 
+    cursor: pointer; 
+ }
+
+.button::after { 
+    margin-left: 10px;  
+} 
+.container-fluid-w750 {
+    max-width: 750px;
+}
+
+.rounded_edges {  
+     border-radius: 15px;   
+     border: 1px solid black; 
+ }
+
+.rounded_box {   
+    background: rgb(189, 216, 167)!important;   
+    border-radius: 50px;   
+    padding: 1em;   
+    width: 100%;   
+    height: 125%;
+}
+
+/* For the box around items in about.html */
+.box_area {   
+    background: rgb(189, 216, 167)!important;      
+    padding: 1em;   
+    width: 100%;   
+    height: 125%;
+}
+
+/* Text over the image */
+.display_text {
+    margin: 5%;
+    position: relative;   
+    padding: 10px;
+}
+.text_inside {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: #374b42;
+}
+
+.text_inside2 {
+    position: absolute;
+    top: 20px;
+    left: 50px;    
+    color: #374b42;
+}
+
+#line-break {
+    white-space: pre-line;
+}
+
+/* Display the character '»' in a list item */
+q::before {
+    content: "»  "; 
+    display: inline-block;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+/* Make the navigation bar for the base.html page*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+  
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #111111;
+}
+
+#special-list {
+    list-style-type: none;
+  }
+  
+  .special-item {
+    text-align: center;
+  }
+
+#styling_test{
+    background-color: silver;
+    color: maroon;
+    overflow: auto;
+}
+
+#profile-wrapper{
+    text-align: center;
+    vertical-align: middle;
+}
+
+#profile-pic{
+    width: 140px;
+    height: 150px;
+    border-radius: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Formatting resume.html */
+#resume-wrapper{
+    text-align: center;
+}
+#resume-format{
+    width: 680px;
+    height: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo-pic{
+    position: absolute;
+    clip: rect(0px,60px,200px,0px);
+}
+
+/* Various css shapes for possible use*/
+#triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid red;
+    border-bottom: 50px solid transparent;
+  }
+
+#yin-yang {
+    width: 96px;
+    box-sizing: content-box;
+    height: 48px;
+    background: #eee;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: relative;
+  }
+  #yin-yang:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #eee;
+    border: 18px solid red;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+  }
+  #yin-yang:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: red;
+    border: 18px solid #eee;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+  }

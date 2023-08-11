@@ -1,0 +1,21 @@
+{% extends 'melsite2/base.html' %}
+{% load static %} 
+
+{% block title %}
+FARS Project
+{% endblock %}
+
+{% block content %}
+
+<div class="display_text">
+  <img src="{% static 'images/blue_car_upside.png' %}" alt="computer_data" style="width:75%;">
+  <div class="text_inside" style="color:rgb(255, 211, 100);"><h3>SeekerFinds.info</h3></div>
+  <h3 style="margin-left:5px; padding-top: 15px;">NHTSA: FARS Data</h3> 
+</div>
+
+<div class="container-md container-fluid"> 
+  <span style="margin-left:170px;">In progress ... </span>
+  <br><button type="button" class="btn btn-outline-secondary btn-sm rounded-2" onclick="history.back ()" style="margin-top:40px;">Go Back</button> 
+</div> 
+</body>
+{% endblock %}

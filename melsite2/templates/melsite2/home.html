@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Melissa's Website</title>
+      <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>  
+  <body>
+    <h3>My Portfolio</h3>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card card-body" id="profile-wrapper">
+            <img id="profile-pic" src="{% static 'images/mb_glasses_plants_fixed_sm.png' %}">
+            <br>
+             <h6> I enjoy data analytics, coding, creating graphical charts, and digital art. </h6>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card card-body">
+            <h4>About Me</h4>
+          <p>Detailed-oriented data scientist with interests in data analytics, coding, graphics design, and painting. Experienced in data-conversion systems, coding/programming in Python, R, SQL, Perl, and C++.  Database work in PostgreSQL, MySQL, SQLite. </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-body">
+           <p>Portfolio
+            <ul>
+              <li>About Me</li>
+              <li>FARS Data from the NHTSA</li>
+              <li>DTSC691 Project</li>
+              <li>Resume</li>
+            </ul>
+            </p>>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card-body"></div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-body"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card-body"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+  <!-- Using <button> tag --> 
+   <button onclick="history.back ()">Go Back to Home</button>
+  </body>
+  <!-- Using <a> tag --> 
+    <style> .button { display: inline-block; border: 1px solid black; padding: 10px 20px; background-color: lightblue; cursor: pointer; } 
+
+    </style> <a href="{% url 'home' %}" class="button">Go Back to Home</a>
+  
+</html>
