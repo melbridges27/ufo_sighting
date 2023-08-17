@@ -2,32 +2,88 @@
 {% load static %} 
 
 {% block title %}
-Test
+Prediction Request
 {% endblock %}
 
 {% block content %}
-<!--<iframe width="760px" height="500px" src="https://sway.office.com/s/wnFobO9psYj8trEX/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>  -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <div class="display_text">
-  <img src="{% static 'images/laptophand.png' %}" alt="computer_data" style="width:100%;">
-  <div class="text_inside"><h3>Get City Prediction for a UAP Sighting</h3></div>
+  <img src="{% static 'images/newzealand_sighting_sm.jpg' %}" class="rounded" alt="new_zeal_sighting" style="height:3%; width:63%;">
+  <div class="text_inside" style="color:rgb(255, 255, 255);">
+    <h4>Get City Frequencies for a UAP Sighting</h4><p>(from Random Forest Regressor model)</p>
+  </div>
+  <br><br>
+  <form method="POST" action="/dtsc691/preds/">
+    {% csrf_token %}
+  <div class="row justify-content">
+    <div class="col-lg-6">
+      <div class="form-group">
+            <label for="city-year-select" class="form-label"><b>Choose City & Year</b></label>
+            <select class="form-select dropup" name="city-year-select" id="city-year-select">
+              <optgroup label="2021">
+                <option value="Albuquerque, NM (2021)">Albuquerque, NM</option>
+                <option value="Auckland, New Zealand (2021)">Auckland, New Zealand</option>
+                <option value="Chicago, IL (2021)">Chicago, IL</option>
+                <option value="Houston, TX (2021)">Houston, TX</option>
+                <option value="Las Vegas, NV (2021)">Las Vegas, NV</option>
+                <option value="London, UK (2021)">London, UK</option>
+                <option value="Los Angeles, CA (2021)">Los Angeles, CA</option>
+                <option value="New York City, NY (2021)">New York City, NY</option>
+                <option value="Pittsburgh, PA (2021)">Pittsburgh, PA</option>
+                <option value="Philadelphia, PA (2021)">Philadelphia, PA</option>
+                <option value="Portland, WA (2021)">Portland, WA</option>
+                <option value="Roswell, NM (2021)">Roswell, NM</option>
+                <option value="San Francisco, CA (2021)">San Francisco, CA</option>
+                <option value="Seattle, WA (2021)">Seattle, WA</option>
+                <option value="Sydney, Australia (2021)">Sydney, Australia</option>                
+                <option value="Taipei, Taiwan (2021)">Taipei, Taiwan</option>
+                <option value="Toronto, Canada (2021)">Toronto, Canada</option>
+                <option value="Washington, DC (2021)">Washington, DC</option>
+              </optgroup>
+              <optgroup label="2022">
+                <option value="Albuquerque, NM (2022)">Albuquerque, NM</option>
+                <option value="Auckland, New Zealand (2022)">Auckland, New Zealand</option>
+                <option value="Cancun, Mexico (2022)">Cancun, Mexico</option>
+                <option value="Chicago, IL (2022)">Chicago, IL</option>
+                <option value="New Delhi, India (2022)">New Delhi, India</option>              
+                <option value="Dubai, UAE (2022)">Dubai, UAE</option>
+                <option value="Gatineau, Canada (2022)">Gatineau, Canada</option>
+                <option value="Houston, TX (2022)">Houston, TX</option>
+                <option value="Johannesburg, South Africa (2022)">Johannesburg, South Africa</option>
+                <option value="Las Vegas, NV (2022)">Las Vegas, NV</option>
+                <option value="Los Angeles, CA (2022)">Los Angeles, CA</option>
+                <option value="London, UK (2022)">London, UK</option>
+                <option value="New York City, NY (2022)">New York City, NY</option>
+                <option value="Paris, France (2022)">Paris, France</option>
+                <option value="Philadelphia, PA (2022)">Philadelphia, PA</option>
+                <option value="Phoenix, AZ (2022)">Phoenix, AZ</option>
+                <option value="Pittsburgh, PA (2022)">Pittsburgh, PA</option>
+                <option value="Portland, WA (2022)">Portland, WA</option> 
+                <option value="Rome, Italy (2022)">Rome, Italy</option>
+                <option value="San Francisco, CA (2022)">San Francisco, CA</option>
+                <option value="Seattle, WA (2022)">Seattle, WA (2022)</option>
+                <option value="Sydney, Australia (2022)">Sydney, Australia</option>
+                <option value="Toronto, Canada (2022)">Toronto, Canada</option>
+                <option value="Washington, DC (2022)">Washington, DC</option>
+            </optgroup>
+            </select>
+      </div>
+    </div>  
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary" style="padding: 5px">Submit</button>
+  <button type="reset" id="resetButton" class="btn btn-secondary" style="padding: 5px">Clear</button>
+  <br> 
+  </form>  
+  <br>
+</div>
 
-<br><br>
-<form>
+<!-- this script resets the form via reset button which doesn't do a good job without the js; source is above -->
+<script>
+    $("#resetButton").click(function() {
+      $("#myForm").trigger("reset");
+    });
+</script>
 
-    <div class="form-group">
-      <label for="exampleFormControlSelect1"><b>Choose City & Year</b></label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>Philadelphia, PA (2021)</option>
-        <option>New York City, NY</option>
-        <option>Houston, TX</option>
-        <option>San Francisco, CA</option>
-        <option>Los Angeles, CA</option>
-        <option>London, UK</option>
-        <option>New Delhi, India</option>
-      </select>
-    </div>
-    <br>
-    <button type="submit" class="btn btn-secondary" style="padding: 5px">Submit</button>
-  </form>
- 
 {% endblock %}

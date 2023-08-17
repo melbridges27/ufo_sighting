@@ -1,6 +1,4 @@
-/*
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
-*/
+/* main.css contains personal css style preferences */
 
 body {
 /*    background-color: #effbe1!important; */
@@ -19,7 +17,7 @@ body {
     margin-left: 10px;  
 } 
 .container-fluid-w750 {
-    max-width: 750px;
+    max-width: 800px;
 }
 
 .rounded_edges {  
@@ -35,7 +33,7 @@ body {
     height: 125%;
 }
 
-/* For the box around items in about.html */
+/* for the box around items in about.html */
 .box_area {   
     background: rgb(189, 216, 167)!important;      
     padding: 1em;   
@@ -43,7 +41,7 @@ body {
     height: 125%;
 }
 
-/* Text over the image */
+/* text over the image */
 .display_text {
     margin: 5%;
     position: relative;   
@@ -67,7 +65,7 @@ body {
     white-space: pre-line;
 }
 
-/* Display the character '»' in a list item */
+/* display the character '»' in a <q> item */
 q::before {
     content: "»  "; 
     display: inline-block;
@@ -75,7 +73,7 @@ q::before {
     color: rgb(0, 0, 0);
 }
 
-/* Make the navigation bar for the base.html page*/
+/* make the navigation bar for the base.html page*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -127,7 +125,7 @@ li a:hover {
     margin-right: auto;
 }
 
-/* Formatting resume.html */
+/* formatting resume.html */
 #resume-wrapper{
     text-align: center;
 }
@@ -143,7 +141,7 @@ li a:hover {
     clip: rect(0px,60px,200px,0px);
 }
 
-/* Various css shapes for possible use*/
+/* various css shapes for possible use later*/
 #triangle-right {
     width: 0;
     height: 0;

@@ -3,7 +3,6 @@ from . import views
 
 urlpatterns  = [
     path("", views.index, name="index"),
-#    path("<str:name>", views.index, name="index"),  # form test
     path("home/", views.home, name="home"),
     path("index/", views.index, name="index"),
     path("about/", views.about, name="about"),
@@ -20,5 +19,7 @@ urlpatterns  = [
     path("dtsc691/world_cities_map/", views.world_cities_map, name="world_cities_map"),
     path("dtsc691/project_analyses/", views.project_analyses, name="project_analyses"),
     path("dtsc691/preds/", views.preds, name="preds"),
-   
+    path("dtsc691/preds_result/", views.preds_result, name="preds_result"),
+    path("dtsc691/error/", views.error, name="error"),
+
 ]

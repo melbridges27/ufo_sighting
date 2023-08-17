@@ -8,6 +8,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
+
+For more information on how to make images recognized by Django see:
+https://docs.djangoproject.com/en/4.2/howto/static-files/
 """
 
 from pathlib import Path
@@ -28,10 +31,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
-INSTALLED_APPS = [
+# Changed INSTALLED_APPS to DEFAULT_APPS for crispy_forms
+DEFAULT_APPS = [
     "melsite2.apps.Melsite2Config",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -39,7 +42,20 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
 ]
+# Added this line for crispy_forms
+THIRD_PARTY_APPS= [
+    "crispy_forms",
+]
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOCAL_APPS = [
+]
+
+# Added this line for crispy_forms to work; may want to comment out in future
+INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -50,6 +66,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
 
 ROOT_URLCONF = "env_site.urls"
 

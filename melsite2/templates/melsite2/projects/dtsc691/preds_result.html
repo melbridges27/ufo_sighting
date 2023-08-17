@@ -1,0 +1,15 @@
+{% extends 'melsite2/base.html' %}
+{% load static %} 
+
+{% block title %}
+Predicted vs Actual Frequency Values
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="row col card-body">
+        <br><h5>In {{ city_val }}:<p class="text-primary"><br>{{ rf_pred }}% Predicted Frequency<br>{{freq_val}}% Actual Frequency</p><br>for a UAP sighting</h5>
+    </div>
+</div>
+<br><button type="button" class="btn btn-outline-secondary btn-sm rounded-2" onclick="history.back ()" style="margin-left: 10px;">Go Back</button>
+{% endblock %}

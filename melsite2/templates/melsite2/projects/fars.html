@@ -8,13 +8,11 @@ FARS Project
 {% block content %}
 
 <div class="display_text">
-  <img src="{% static 'images/blue_car_upside.png' %}" alt="computer_data" style="width:75%;">
-  <div class="text_inside" style="color:rgb(250, 206, 94);"><h3>SeekerFinds.info</h3></div>
-  <h3 style="margin-left:5px; padding-top: 15px;">NHTSA: FARS Data</h3> 
-</div>
-<div class="container-md container-fluid"> 
-  <h5 style="margin-left:30px;">In progress ... </h5>
-  <br><button type="button" class="btn btn-outline-secondary btn-sm rounded-2" onclick="history.back ()" style="margin-top:40px;">Go Back</button> 
+  <img src="{% static 'images/blue_car_upside.png' %}" class="rounded" alt="autocrash_data" style="width:60%;">
+  <div class="text_inside" style="color:rgb(16, 96, 255);"><h3>NHTSA: FARS Data</h3></div>
+  <h3 style="margin-left:5px; padding-top: 15px;"></h3> 
+  <span style="margin-left:10px;">In progress ... </span> 
+  <br><button type="button" class="btn btn-outline-secondary btn-sm rounded-2" onclick="history.back ()" style="margin-left:5px; margin-top: 100px;">Go Back</button> 
 </div> 
-</body>
+
 {% endblock %}

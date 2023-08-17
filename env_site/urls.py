@@ -23,3 +23,4 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("melsite2.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

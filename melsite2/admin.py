@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import toDoList, Item
+from .models import FreqList, City
 
 # Register your models here.
-admin.site.register(toDoList)
-admin.site.register(Item)
+admin.site.register(FreqList)
+admin.site.register(City)
 
