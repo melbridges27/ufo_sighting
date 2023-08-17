@@ -9,7 +9,7 @@ body {
     border: none; 
     padding: 0;  
     font-size: 16px; 
-    color: blue; 
+    color: rgb(255, 255, 255); 
     cursor: pointer; 
  }
 
@@ -49,8 +49,9 @@ body {
 }
 .text_inside {
     position: absolute;
-    top: 20px;
-    left: 50px;
+    top: 25px;
+    left: 25px;
+    width: auto;
     color: #374b42;
 }
 
@@ -66,6 +67,7 @@ body {
 }
 
 /* display the character '»' in a <q> item */
+
 q::before {
     content: "»  "; 
     display: inline-block;
@@ -77,17 +79,16 @@ q::before {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #333333;
 }
-  
+
 li {
     float: left;
 }
 
 li a {
-    display: block;
+    display: inline-flex;
     color: white;
     text-align: center;
     padding: 16px;
@@ -95,7 +96,9 @@ li a {
 }
   
 li a:hover {
-    background-color: #111111;
+    background-color: #030c0b;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 #special-list {
