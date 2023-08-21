@@ -7,7 +7,7 @@ from .forms import FreqForm
 def home(request):
     return render(request, 'melsite2/index.html', {})
 
-def preds(request):  
+def preds(request):
     form = FreqForm(request.POST or None, request.FILES or None)
     if request.method == "POST":
         freq_id = request.POST.get("city-year-select")
@@ -24,8 +24,8 @@ def preds(request):
             pred_freq = item_db.rf_pred
             # assign these values to the context dict
             context = {"city_val": item_db, "freq_val": actual_freq, "rf_pred": pred_freq}
-            #print(context)  # for debugging
-            return render(request, "melsite2/projects/dtsc691/preds_result.html", context)           
+            print(context)  # for debugging
+            return render(request, "melsite2/projects/dtsc691/preds_result.html", context)
     else:
         form = FreqForm()
         return render(request, "melsite2/projects/dtsc691/preds.html", {"form":form})
