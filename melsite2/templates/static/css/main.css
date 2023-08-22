@@ -43,15 +43,13 @@ body {
 
 /* text over the image */
 .display_text {
-    margin: 5%;
     position: relative;   
-    padding: 10px;
 }
 .text_inside {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    width: auto;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: auto; 
     color: #374b42;
 }
 
@@ -133,8 +131,8 @@ li a:hover {
     text-align: center;
 }
 #resume-format{
-    width: 680px;
-    height: 950px;
+    width: 720px;
+    height: 1200px;
     margin-left: auto;
     margin-right: auto;
 }

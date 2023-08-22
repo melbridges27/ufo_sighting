@@ -6,10 +6,11 @@ Fetal Health Data
 {% endblock %}
 
 {% block content %}
-<div class="display_text">
-  <img src="{% static 'images/baby_held.jpg' %}" class="rounded" alt="baby" style="width: 65%;">
-  <div class="text_inside" style="color: white;"><h3>Fetal Health Classifier</h3></div><br><br>
-  <span style="margin-left:10px;">In progress ... </span>
-  <br><button type="button" class="btn btn-outline-secondary btn-sm rounded-2" onclick="history.back ()" style="margin-left:5px; margin-top: 100px;">Go Back</button>  
-</div>
+<div class="container-fluid display_text" style="max-width: 900px; margin-left:40px; margin-top: 40px">
+  <img src="{% static 'images/baby_held.jpg' %}" class="rounded" alt="baby" style="width: 90%;">
+  <div class="text_inside" style="color:white;"><h3>Fetal Health Classifier</h3></div>
+  <h3 style="margin-left:5px; padding-top: 15px;"></h3> 
+  <span style="margin-left:10px;">In progress ... </span> 
+  <br><button type="button" class="btn btn-outline-secondary btn-sm rounded-2" onclick="history.back ()" style="margin-left:5px; margin-top: 100px;">Go Back</button> 
+</div> 
 {% endblock %}
